@@ -86,7 +86,7 @@ class AgenteAlocador(Agent):
         # 2 Objetos x 3 Caixas = 6 ações possíveis
         self.print(f"Espaço de Ações: {len(model.actions_list)} (esperado: 6)") 
         
-        # Treinamento com 5000 episódios para garantir exploração da Box_3
+        # Treinamento com X episódios para garantir exploração da Box_3
         model.learn(qlearning, num_episodes=20, max_steps=10)
         
         self.print("Treinamento concluído. Executando política aprendida.")
